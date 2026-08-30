@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фильмография — Никита Волосюк</title>
+    <meta name="description" content="Полный список фильмов и проектов оператора-постановщика Никиты Волосюка." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;600&family=Russo+One&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/retro-futurism.css" />
+</head>
+<body>
+    <div class="grain-overlay" aria-hidden="true"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NIK</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="filmography.html" class="nav-link active">Фильмография</a></li>
+                <li><a href="about.html" class="nav-link">Обо мне</a></li>
+                <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1 class="page-title">Фильмография</h1>
+                <p class="page-subtitle">2024–2026</p>
+                <div class="retro-line"></div>
+            </div>
+        </section>
+
+        <section class="film-list">
+
+            <!-- Film 1: Беседа пьяного с чертом -->
+            <article class="film-item" id="beseda-s-chertom">
+                <div class="film-container">
+                    <div class="film-media">
+                        <div class="film-video-wrapper scan-lines viewfinder-border video-wrapper-with-poster">
+                            <!-- Постер -->
+                            <div class="poster-overlay" style="background-image: url('assets/images/beseda-poster.jpg');" onclick="this.classList.add('hidden')">
+                                <div class="play-button">▶</div>
+                            </div>
+                            <!-- Видео -->
+                            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;">
+                                <iframe 
+                                    width="720" 
+                                    height="405" 
+                                    src="https://rutube.ru/play/embed/95e55f3624671f5d989a7eb49dc04d0c/?p=VPygI4aND8heD0FQOllJcQ" 
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    frameborder="0" 
+                                    allow="clipboard-write; autoplay" 
+                                    webkitAllowFullScreen 
+                                    mozallowfullscreen 
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="film-details">
+                        <div class="film-header">
+                            <h2 class="film-title">Беседа пьяного с чертом</h2>
+                            <span class="film-year">2026</span>
+                        </div>
+                        <p class="film-director">Режиссёр: Руслан Мирзаханов</p>
+                        
+                        <div class="film-synopsis">
+                            <h4>Логлайн</h4>
+                            <p>Спивающийся неудачник в бреду встречает Чёрта, но вместо князя тьмы перед ним жалкое существо, застрявшее в том же экзистенциальном тупике. Их разговор обнажает абсурд современного мира, в котором даже зло стало бессильным.</p>
+                        </div>
+                        
+                        <div class="film-tech">
+                            <div class="tech-item">
+                                <span class="tech-label">Камера</span>
+                                <span class="tech-value">Canon C300m3</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Оптика</span>
+                                <span class="tech-value">Canon</span>
+                            </div>
+                        </div>
+                        <div class="film-status">
+                            <span class="status-badge">Текущий статус</span>
+                            <p>Разработка</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Film 2: Омут (галерея) -->
+            <article class="film-item" id="omut">
+                <div class="film-container">
+                    <div class="film-media">
+                        <div class="film-video-wrapper scan-lines viewfinder-border">
+                            <div class="film-gallery" id="gallery-omut">
+                                <div class="gallery-main">
+                                    <img src="assets/images/omut/omut-01.jpg" alt="Омут - кадр 1" class="gallery-main-img" id="mainImg-omut" />
+                                    <button class="gallery-arrow gallery-prev" id="prevBtn-omut">‹</button>
+                                    <button class="gallery-arrow gallery-next" id="nextBtn-omut">›</button>
+                                </div>
+                                <div class="gallery-thumbnails">
+                                    <img src="assets/images/omut/omut-01.jpg" alt="Кадр 1" class="gallery-thumb active" data-index="0" />
+                                    <img src="assets/images/omut/omut-02.jpg" alt="Кадр 2" class="gallery-thumb" data-index="1" />
+                                    <img src="assets/images/omut/omut-03.jpg" alt="Кадр 3" class="gallery-thumb" data-index="2" />
+                                    <img src="assets/images/omut/omut-04.jpg" alt="Кадр 4" class="gallery-thumb" data-index="3" />
+                                    <img src="assets/images/omut/omut-05.jpg" alt="Кадр 5" class="gallery-thumb" data-index="4" />
+                                    <img src="assets/images/omut/omut-06.jpg" alt="Кадр 6" class="gallery-thumb" data-index="5" />
+                                </div>
+                                <div class="gallery-counter" id="counter-omut">1 / 6</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="film-details">
+                        <div class="film-header">
+                            <h2 class="film-title">Омут</h2>
+                            <span class="film-year">2026</span>
+                        </div>
+                        <p class="film-director">Режиссёр: Алина Конарева</p>
+                        
+                        <div class="film-synopsis">
+                            <h4>Логлайн</h4>
+                            <p>Артем живет в детском доме с самого детства. И все, о чем он мечтает, это отомстить собственной матери, у которой, как оказалось, есть еще один ребенок, которого она не бросила.</p>
+                        </div>
+                        
+                        <div class="film-artistic">
+                            <h4>Особенности</h4>
+                            <p>Работа с жанром, где сны становятся реальностью.</p>
+                        </div>
+                        
+                        <div class="film-tech">
+                            <div class="tech-item">
+                                <span class="tech-label">Камера</span>
+                                <span class="tech-value">ARRI ALEXA MINI</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Оптика</span>
+                                <span class="tech-value">ARRI ULTRA PRIME / Carl Zeis Distagon-Planar</span>
+                            </div>
+                        </div>
+                        
+                        <div class="film-status">
+                            <span class="status-badge">Текущий статус</span>
+                            <p>Постпродакшн</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Film 3: Черное молоко -->
+            <article class="film-item" id="chernoe-moloko">
+                <div class="film-container">
+                    <div class="film-media">
+                        <div class="film-video-wrapper scan-lines viewfinder-border video-wrapper-with-poster">
+                            <!-- Постер -->
+                            <div class="poster-overlay" style="background-image: url('assets/images/chernoe-moloko-poster.png');" onclick="this.classList.add('hidden')">
+                                <div class="play-button">▶</div>
+                            </div>
+                            <!-- Видео -->
+                            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;">
+                                <iframe 
+                                    width="720" 
+                                    height="405" 
+                                    src="https://rutube.ru/play/embed/541bbf77736f7e6f7b8f81f81939922d/?p=Gdy1lKMK-pJEqh9IzWHZkQ" 
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    frameborder="0" 
+                                    allow="clipboard-write; autoplay" 
+                                    webkitAllowFullScreen 
+                                    mozallowfullscreen 
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="film-details">
+                        <div class="film-header">
+                            <h2 class="film-title">Черное молоко</h2>
+                            <span class="film-year">2025</span>
+                        </div>
+                        <p class="film-director">Режиссёр: Лада Панова</p>
+                        
+                        <div class="film-synopsis">
+                            <h4>Логлайн</h4>
+                            <p>На последнем сроке беременности молодая девушка из неблагополучной семьи с парнем приезжает в деревню продавать китайские тостеры, но, родив ребенка, неожиданно решает остаться там навсегда.</p>
+                        </div>
+                        
+                        <div class="film-artistic">
+                            <h4>Особенности</h4>
+                            <p>Использование натурного освещения, работа с контрастом, сохранение единства изображения в изменяющихся погодных условиях.</p>
+                        </div>
+                        
+                        <div class="film-tech">
+                            <div class="tech-item">
+                                <span class="tech-label">Камера</span>
+                                <span class="tech-value">Canon C300m2</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Оптика</span>
+                                <span class="tech-value">Sigma Cine</span>
+                            </div>
+                        </div>
+                        <div class="film-status">
+                            <span class="status-badge">Текущий статус</span>
+                            <p>Международный прокат</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Film 4: Какая наглость -->
+            <article class="film-item" id="kakaya-naglost">
+                <div class="film-container">
+                    <div class="film-media">
+                        <div class="film-video-wrapper scan-lines viewfinder-border">
+                           <div style="position: relative; padding-top: 56.25%; width: 100%">
+                                <iframe 
+                                    src="https://kinescope.io/embed/5Yn9oHifiqnpuZVdg29xcy" 
+                                    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" 
+                                    frameborder="0" 
+                                    allowfullscreen 
+                                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="film-details">
+                        <div class="film-header">
+                            <h2 class="film-title">Какая наглость</h2>
+                            <span class="film-year">2025</span>
+                        </div>
+                        <p class="film-director">Режиссёр: Настасья Лукманова</p>
+                        
+                        <div class="film-synopsis">
+                            <h4>Логлайн</h4>
+                            <p>Бросивший пить интеллигент, ограбленный уличным нахалом, решает дать отпор и вернуть чувство собственного достоинства, но сталкивается с абсурдной правдой: с трезвых глаз наглость выглядит еще чудовищнее.</p>
+                        </div>
+                        
+                        <div class="film-artistic">
+                            <h4>Особенности</h4>
+                            <p>Использование различного характера движения камеры для эмоционального разделения сцен.</p>
+                        </div>
+                        
+                        <div class="film-tech">
+                            <div class="tech-item">
+                                <span class="tech-label">Камера</span>
+                                <span class="tech-value">Blackmagic Pocket 4K</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Оптика</span>
+                                <span class="tech-value">Meike</span>
+                            </div>
+                        </div>
+                        
+                        <div class="film-status">
+                            <span class="status-badge">Текущий статус</span>
+                            <p>Международный прокат</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Film 5: Рыцарь ИСБ -->
+            <article class="film-item" id="rycar-isb">
+                <div class="film-container">
+                    <div class="film-media">
+                        <div class="film-video-wrapper scan-lines viewfinder-border video-wrapper-with-poster">
+                            <!-- Постер -->
+                            <div class="poster-overlay" style="background-image: url('assets/images/rycar-isb-poster.png');" onclick="this.classList.add('hidden')">
+                                <div class="play-button">▶</div>
+                            </div>
+                            <!-- Видео -->
+                            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;">
+                                <iframe 
+                                    width="720" 
+                                    height="405" 
+                                    src="https://rutube.ru/play/embed/3d352fa4deeacb5119738a5ff3063665/?p=R1LIk9FCq4y9vnxMHrXOgg" 
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    frameborder="0" 
+                                    allow="clipboard-write; autoplay" 
+                                    webkitAllowFullScreen 
+                                    mozallowfullscreen 
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="film-details">
+                        <div class="film-header">
+                            <h2 class="film-title">Рыцарь ИСБ</h2>
+                            <span class="film-year">2025</span>
+                        </div>
+                        <p class="film-director">Режиссёр: -</p>
+                        <div class="film-synopsis">
+                            <h4></h4>
+                            <p>Документальный фильм.</p>
+                        </div>
+                        
+                        <div class="film-tech">
+                            <div class="tech-item">
+                                <span class="tech-label">Камера</span>
+                                <span class="tech-value">Blackmagic Pocket 4K / Sony a6700</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Оптика</span>
+                                <span class="tech-value">Meike</span>
+                            </div>
+                        </div>
+                        <div class="film-status">
+                            <span class="status-badge">Текущий статус</span>
+                            <p>Постпродакшн</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Film 6: Карусель -->
+            <article class="film-item" id="karusel">
+                <div class="film-container">
+                    <div class="film-media">
+                        <div class="film-video-wrapper scan-lines viewfinder-border">
+                            <div style="position: relative; padding-top: 56.25%; width: 100%">
+                                <iframe 
+                                    src="https://kinescope.io/embed/9kumHxzJ539kzuJssGhhay" 
+                                    allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" 
+                                    frameborder="0" 
+                                    allowfullscreen 
+                                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="film-details">
+                        <div class="film-header">
+                            <h2 class="film-title">Карусель</h2>
+                            <span class="film-year">2025</span>
+                        </div>
+                        <p class="film-director">Режиссёр: Анастасия Кранкова</p>
+                        
+                        <div class="film-synopsis">
+                            <h4>Логлайн</h4>
+                            <p>Четырнадцатилетняя Аня живет в деревне с бабушкой и мечтает накопить денег, чтобы уехать. Неожиданный приезд матери заставляет ее столкнуться с моральным выбором, к которому ребенок оказывается не готов.</p>
+                        </div>
+                        
+                        <div class="film-artistic">
+                            <h4>Особенность</h4>
+                            <p>Работа в предельно сжатые сроки.</p>
+                        </div>
+                        
+                        <div class="film-tech">
+                            <div class="tech-item">
+                                <span class="tech-label">Камера</span>
+                                <span class="tech-value">Blackmagic Pocket 6K</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Оптика</span>
+                                <span class="tech-value">Rokinon</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Film 7: Просто Олег -->
+            <article class="film-item" id="prosto-oleg">
+                <div class="film-container">
+                    <div class="film-media">
+                        <div class="film-video-wrapper scan-lines viewfinder-border video-wrapper-with-poster">
+                            <!-- Постер -->
+                            <div class="poster-overlay" style="background-image: url('assets/images/prosto-oleg-poster.png');" onclick="this.classList.add('hidden')">
+                                <div class="play-button">▶</div>
+                            </div>
+                            <!-- Видео -->
+                            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;background:#000;">
+                                <iframe 
+                                    width="720" 
+                                    height="405" 
+                                    src="https://rutube.ru/play/embed/5b0dd964b4823f03ad9c56b30ddcd185/?p=NNh9TX3-9s1QoVhHtBqxNQ" 
+                                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                                    frameborder="0" 
+                                    allow="clipboard-write; autoplay" 
+                                    webkitAllowFullScreen 
+                                    mozallowfullscreen 
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="film-details">
+                        <div class="film-header">
+                            <h2 class="film-title">Просто Олег</h2>
+                            <span class="film-year">2024</span>
+                        </div>
+                        <p class="film-director">Режиссёр: Руслан Мирзаханов</p>
+                        
+                        <div class="film-synopsis">
+                            <h4></h4>
+                            <p>Документальный фильм.</p>
+                        </div>
+                        
+                        <div class="film-tech">
+                            <div class="tech-item">
+                                <span class="tech-label">Камера</span>
+                                <span class="tech-value">Blackmagic Pocket 6k</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-label">Оптика</span>
+                                <span class="tech-value">Sigma 18-35</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Back to top -->
+        <div class="back-to-top">
+            <a href="#top" class="btn-secondary">↑ Наверх</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-copy">© 2026 Никита Волосюк</p>
+            <div class="footer-links">
+                <a href="https://t.me/@niiiiiiiiiiiiiiiii_iiiiiiik" target="_blank" rel="noopener">Telegram</a>
+                <a href="mailto:nikiitsky@gmail.com">Email</a>
+            </div>
+        </div>
+        <div class="footer-line retro-line"></div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/transitions.js" defer></script>
+    <script src="js/grain-effect.js" defer></script>
+    <script src="js/video-player.js" defer></script>
+</body>
+</html>
