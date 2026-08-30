@@ -1,0 +1,313 @@
+/* ========== GRAIN OVERLAY ========== */
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+    transition: opacity 0.3s ease;
+}
+
+.grain-overlay:hover {
+    opacity: 0.05;
+}
+
+/* ========== VIGNETTE ========== */
+.vignette {
+    position: relative;
+}
+
+.vignette::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ========== VIEWFINDER BORDER ========== */
+.viewfinder-border {
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.06);
+}
+
+.viewfinder-border::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* ========== SCAN LINES ========== */
+.scan-lines {
+    position: relative;
+    overflow: hidden;
+}
+
+.scan-lines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.04) 2px,
+            rgba(0, 0, 0, 0.04) 4px);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ========== NEON GLOW ========== */
+.neon-glow {
+    text-shadow:
+        0 0 10px rgba(217, 122, 62, 0.3),
+        0 0 40px rgba(217, 122, 62, 0.1);
+}
+
+.neon-glow-cyan {
+    text-shadow:
+        0 0 10px rgba(74, 158, 255, 0.3),
+        0 0 40px rgba(74, 158, 255, 0.1);
+}
+
+/* ========== FLICKER TEXT ========== */
+@keyframes flicker {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.97;
+    }
+    25%,
+    75% {
+        opacity: 0.99;
+    }
+}
+
+.retro-text {
+    animation: flicker 3s infinite;
+    font-family: var(--font-mono);
+    letter-spacing: 0.2em;
+}
+
+/* ========== DEVELOP ANIMATION ========== */
+@keyframes develop {
+    0% {
+        filter: brightness(0) contrast(0);
+        transform: scale(1.02);
+    }
+    100% {
+        filter: brightness(1) contrast(1);
+        transform: scale(1);
+    }
+}
+
+.develop-animation {
+    animation: develop 1.2s ease-out forwards;
+}
+
+/* ========== FILM BURN ========== */
+@keyframes filmBurn {
+    0% {
+        filter: brightness(1) sepia(0);
+    }
+    50% {
+        filter: brightness(1.3) sepia(0.3);
+    }
+    100% {
+        filter: brightness(1) sepia(0);
+    }
+}
+
+.film-burn {
+    animation: filmBurn 4s ease-in-out infinite;
+}
+
+/* ========== CRT SCAN ========== */
+@keyframes crtScan {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.crt-scan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.03);
+    animation: crtScan 4s linear infinite;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* ========== CHROMATIC ABERRATION ========== */
+@keyframes chromaticAberration {
+    0%,
+    100% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(1px, -1px);
+    }
+}
+
+.chromatic:hover {
+    animation: chromaticAberration 0.1s ease-in-out 3;
+}
+
+/* ========== RETRO LINE STYLES ========== */
+.retro-line-thin {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-amber), transparent);
+    opacity: 0.15;
+    margin: 2rem 0;
+}
+
+.retro-line-thick {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-amber), transparent);
+    opacity: 0.2;
+    margin: 2rem 0;
+}
+
+/* ========== FILM PERFORATION ========== */
+.film-perforation {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.film-perforation::before,
+.film-perforation::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: repeating-linear-gradient(90deg,
+            transparent,
+            transparent 8px,
+            rgba(217, 122, 62, 0.2) 8px,
+            rgba(217, 122, 62, 0.2) 10px);
+}
+
+.film-perforation::before {
+    top: 0;
+}
+
+.film-perforation::after {
+    bottom: 0;
+}
+
+/* ========== GLASS EFFECT ========== */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ========== VHS NOISE ========== */
+@keyframes vhsNoise {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    10% {
+        transform: translateX(-1px) translateY(1px);
+    }
+    20% {
+        transform: translateX(1px) translateY(-1px);
+    }
+    30% {
+        transform: translateX(-0.5px) translateY(0.5px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+.vhs-noise {
+    animation: vhsNoise 0.3s ease-in-out infinite;
+}
+
+/* ========== 3D PERSPECTIVE ========== */
+.perspective-3d {
+    perspective: 1000px;
+}
+
+.perspective-3d:hover {
+    transform: rotateX(2deg) rotateY(2deg);
+    transition: transform 0.5s ease;
+}
+
+/* ========== GLITCH TEXT ========== */
+.glitch-text {
+    position: relative;
+    display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch-text::before {
+    color: #ff00ff;
+    z-index: -1;
+    animation: glitchText 3s infinite;
+}
+
+.glitch-text::after {
+    color: #00ffff;
+    z-index: -2;
+    animation: glitchText 3s infinite reverse;
+}
+
+@keyframes glitchText {
+    0%,
+    100% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(2px, -2px);
+    }
+    60% {
+        transform: translate(-1px, 1px);
+    }
+    80% {
+        transform: translate(1px, -1px);
+    }
+}
