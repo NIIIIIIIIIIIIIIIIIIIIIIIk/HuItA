@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты — Никита Волосюк</title>
+    <meta name="description" content="Свяжитесь с оператором-постановщиком Никитой Волосюком для сотрудничества." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;600&family=Russo+One&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/retro-futurism.css" />
+</head>
+<body>
+    <div class="grain-overlay" aria-hidden="true"></div>
+    
+    <nav class="navbar" role="navigation">
+        <div class="nav-container">
+            <a href="index.html" class="logo">NIK</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="filmography.html" class="nav-link">Фильмография</a></li>
+                <li><a href="about.html" class="nav-link">Обо мне</a></li>
+                <li><a href="contacts.html" class="nav-link active">Контакты</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1 class="page-title">Контакты</h1>
+                <p class="page-subtitle">Свяжитесь со мной для сотрудничества</p>
+                <div class="retro-line"></div>
+            </div>
+        </section>
+
+        <section class="contacts-section">
+            <div class="contacts-container">
+                <div class="contacts-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div class="contact-details">
+                            <span class="contact-label">Телефон</span>
+                            <a href="tel:+79990617704" class="contact-value">+7 900 123-45-67</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:nikiitsky@gmail.com" class="contact-value">nikiitsky@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <div class="contact-details">
+                            <span class="contact-label">Telegram</span>
+                            <a href="https://t.me/@niiiiiiiiiiiiiiiii_iiiiiiik" target="_blank" rel="noopener" class="contact-value">@niiiiiiiiiiiiiiiii_iiiiiiik</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm" action="#" method="POST">
+                        <h3>Напишите мне</h3>
+                        <div class="form-group">
+                            <label for="formName">Имя</label>
+                            <input type="text" id="formName" name="name" placeholder="Ваше имя" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="formEmail">Email</label>
+                            <input type="email" id="formEmail" name="email" placeholder="your@email.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="formSubject">Тема</label>
+                            <input type="text" id="formSubject" name="subject" placeholder="Тема сообщения" />
+                        </div>
+                        <div class="form-group">
+                            <label for="formMessage">Сообщение</label>
+                            <textarea id="formMessage" name="message" rows="5" placeholder="Расскажите о вашем проекте..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            Отправить
+                            <span class="btn-arrow">→</span>
+                        </button>
+                        <p class="form-note">Я отвечу в течение 24 часов</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Hours -->
+        <section class="work-hours">
+            <div class="work-hours-container">
+                <div class="retro-line"></div>
+                <p class="work-hours-text">
+                    <span class="label">Доступен для съёмок:</span>
+                    <span class="value">По договорённости</span>
+                </p>
+                <p class="work-hours-location">
+                    <span class="label">База:</span>
+                    <span class="value">Санкт-Петербург / Москва</span>
+                </p>
+                <div class="retro-line"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-copy">© 2026 Никита Волосюк</p>
+            <div class="footer-links">
+                <a href="https://t.me/@niiiiiiiiiiiiiiiii_iiiiiiik" target="_blank" rel="noopener">Telegram</a>
+                <a href="mailto:nikiitsky@gmail.com">Email</a>
+            </div>
+        </div>
+        <div class="footer-line retro-line"></div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/transitions.js" defer></script>
+    <script src="js/grain-effect.js" defer></script>
+</body>
+</html>
